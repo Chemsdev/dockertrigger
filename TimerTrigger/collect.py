@@ -1,4 +1,5 @@
 import mysql.connector
+import logging
 
 def db_connect(host: str, user: str, password: str, database: str):
     db = mysql.connector.connect(
@@ -26,4 +27,4 @@ def requete():
 
     cursor.execute("INSERT INTO `trigger` (value) VALUES ('fonctionne biennnn !')")
     conn.commit()
-    print("Donnée insérée avec succès !")
+    logging.info("Donnée insérée avec succès !")
